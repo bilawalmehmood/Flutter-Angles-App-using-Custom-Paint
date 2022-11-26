@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_angles_with_custom_paint/res/app_constants.dart';
-import 'package:flutter_angles_with_custom_paint/screens/custom_paint/linear_custom_paint.dart';
+import 'package:flutter_angles_with_custom_paint/screens/custom_paint/arc_painter_screen.dart';
+import 'package:flutter_angles_with_custom_paint/screens/custom_paint/circle_painter_screen.dart';
+import 'package:flutter_angles_with_custom_paint/screens/custom_paint/components/circle_painter.dart';
+import 'package:flutter_angles_with_custom_paint/screens/custom_paint/linear_painter_screen.dart';
+import 'package:flutter_angles_with_custom_paint/screens/custom_paint/ractangular_painter_screen.dart';
+import 'package:flutter_angles_with_custom_paint/screens/custom_paint/rounded_ractangular_painter_screen.dart';
+import 'package:flutter_angles_with_custom_paint/screens/custom_paint/tringle_painter_screen.dart';
 import 'package:flutter_angles_with_custom_paint/screens/home/components/cutom_tabbar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,15 +26,12 @@ class HomeScreen extends StatelessWidget {
         Tab(icon: Icon(Icons.image), text: 'Image'),
       ],
       children: [
-        LinearCustomPaintScreen(),
-        Center(
-            child: Text("Ractangular", style: TextStyle(color: Colors.white))),
-        Center(
-            child: Text("Rounded Rectangle",
-                style: TextStyle(color: Colors.white))),
-        Center(child: Text("Circle", style: TextStyle(color: Colors.white))),
-        Center(child: Text("Arc", style: TextStyle(color: Colors.white))),
-        Center(child: Text("Triangle", style: TextStyle(color: Colors.white))),
+        LinearPainterScreen(),
+        RactangularPainterScreen(),
+        RoundedRactangularPainterScreen(),
+        CirclePainterScreen(),
+        ArcPainterScreen(),
+        TringlePainterScreen(),
         Center(child: Text("Image", style: TextStyle(color: Colors.white))),
       ],
     );
